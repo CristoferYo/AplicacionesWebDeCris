@@ -1,0 +1,140 @@
+#Fondo{
+    background-color: green;
+    color: transparent ;
+    height: 100px;
+    width: 1000px;
+    border-style: solid ;
+    border-color: black;
+}
+#ultimofondo{
+    background-color: white ;
+    color: transparent;
+    height: 500px;
+    width: 1000px;
+    border-style: solid;
+    border-color: black;
+}
+#otrofondo{
+    background-color: blue;
+    color: transparent;
+    height: 300px;
+    width: 1000px;
+    border-style: solid;
+    border-color: black;
+}
+#foot{
+  background-color: yellow ;
+  color: transparent;
+  height: 50px;
+  width: 1000px;
+  border-style: solid;
+  border-color: black;
+}
+.box{
+    width: 140px;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    z-index: 1;    
+}
+  .box:nth-child(2) {
+    z-index: 4;
+    left: 240px;
+  }
+  
+  .box:nth-child(3) {
+    z-index: 3;
+    left: 440px;
+  }
+  
+  .box:nth-child(4) {
+    z-index: 2;
+    left: 630px;
+  }
+  .box:nth-child(5) {
+    z-index: 1;
+    left: 830px;
+  }
+#banner {
+  width: 800px;
+  height: 240px;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  position: absolute;
+  top:143px;
+  left:20px;
+}
+#logo{
+  width: 140px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  top: 143px;
+  right: 224px;
+}
+#login{
+  width: 140px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  top: 223px;
+  right: 224px;
+}
+#boton{
+  width: 140px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  top: 310px;
+  right: 224px;
+}
+#article{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    position: absolute;
+    margin:250px;
+    top:165px;
+  }
+.aside{ /*Aqui en width de acuerdo al maquetado saliá que debía poner 200px pero quedaba con un espacio vacio en medio y no me gustaba así que le puse 250*/
+    width: 250px;
+    height: 500px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    position: absolute;
+    z-index: 1;
+  }
+  .aside:nth-child(2) {
+    z-index: 2;
+    margin:250px;
+    top:165px;
+    left: 506px ;
+  }
+  
+  .aside:nth-child(3) {
+    z-index: 1;
+    margin:250px;
+    top:165px;
+    left: 506px ;
+  }

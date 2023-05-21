@@ -1,0 +1,54 @@
+#Banner { 
+    background-color: white;
+    border-style: solid;
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+}
+#Logo{
+    position: absolute;
+    top: 8px;
+    right: 448px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+#Fondo{
+    background-color: green;
+    color: transparent;
+    height: 50px;
+    width: 750px;
+    border-style: solid;
+    border-color: black;
+}
+#Article{
+    background-color: white;
+    border-style: solid;
+    width: 450px;
+    height: 400px;
+    text-align: center;
+    align-items: center;
+}
+#aside{
+    position: absolute;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    right: 448px;
+    top: 316px;
+}
+#foot{
+    background-color: yellow ;
+    color: transparent;
+    height: 50px;
+    width: 750px;
+    border-style: solid ;
+    border-color: black;
+}
