@@ -1,0 +1,36 @@
+body{
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(hsl(240, 96%, 17%),#0a575a);
+    border: white solid;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+#soyese{
+    height: 250px;
+    border: white solid;
+    float: left;
+    margin: 10px;
+    border-radius:100px;
+}
+fieldset{
+    border:solid white;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+legend{
+padding: 15px;
+border: solid white;
+border-radius: 30px;
+color: blue !important;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+background-color: white !important;
+}
+ul{
+    font-family:Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
