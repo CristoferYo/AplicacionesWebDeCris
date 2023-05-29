@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="EstiloForm.css">
+  <title>Formulario</title>
+</head>
+<body>
+  <h1>Formulario</h1>
+  <form>    
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+    <br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+<br>
+    <label>Fecha de Nacimiento:</label>
+    <div>
+      <input type="number" id="fecha-nacimiento-dia" name="fecha-nacimiento-dia" min="1" max="31" placeholder="Dia" required>
+      <input type="number" id="fecha-nacimiento-mes" name="fecha-nacimiento-mes" min="1" max="12" placeholder="Mes" required>
+      <input type="number" id="fecha-nacimiento-año" name="fecha-nacimiento-año" min="1900" max="2023" placeholder="Año" required>
+    </div>
+<br>
+    <label for="ciudad-nacimiento">Ciudad de Nacimiento:</label>
+    <input type="text" id="ciudad-nacimiento" name="ciudad-nacimiento" placeholder="Cuidad de nacimiento" required><br>
+
+    <label for="pais-nacimiento">País de Nacimiento:</label>
+    <select id="LugarNac" name="LugarNac" required>
+      <option value="">Seleccionar...</option>
+      <option value="mexicana">Mexico</option>
+      <option value="estadounidense">Estados Unidos</option>
+      <option value="española">España</option>
+      <option value="Canadiense">Canada</option>
+      <option value="Ruso">Rusia</option>
+      <option value="Australia">Australia</option>
+    </select>
+    <br>
+
+    <label for="nacionalidad">Nacionalidad:</label>
+    <select id="Lugarnacionalidad" name="Lugarnacionalidad" required>
+      <option value="">Seleccionar...</option>
+      <option value="mexicana">Mexico</option>
+      <option value="estadounidense">Estados Unidos</option>
+      <option value="española">España</option>
+      <option value="Canadiense">Canada</option>
+      <option value="Ruso">Rusia</option>
+      <option value="Australia">Australia</option>
+    </select>
+    <br>
+
+    <label for="numero-pasaporte">Número de Pasaporte:</label>
+    <input type="text" id="numero-pasaporte" name="numero-pasaporte" placeholder="Numero de Pasaporte" required>
+    <br>
+
+    <label>Fecha de Emisión del Pasaporte:</label>
+    <div>
+      <input type="number" id="fecha-emision-dia" name="fecha-emision-dia" min="1" max="31" placeholder="Dia" required>
+      <input type="number" id="fecha-emision-mes" name="fecha-emision-mes" min="1" max="12" placeholder="Mes" required>
+      <input type="number" id="fecha-emision-año" name="fecha-emision-año" min="1900" max="2023" placeholder="Año" required>
+    </div>
+    <br>
+
+    <label>Fecha de Vencimiento del Pasaporte:</label>
+    <div>
+      <input type="number" id="fecha-vencimiento-dia" name="fecha-vencimiento-dia" min="1" max="31" placeholder="Dia" required>
+      <input type="number" id="fecha-vencimiento-mes" name="fecha-vencimiento-mes" min="1" max="12" placeholder="Mes" required>
+      <input type="number" id="fecha-vencimiento-año" name="fecha-vencimiento-año" min="1900" max="2023" placeholder="Año" required>
+    </div><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
