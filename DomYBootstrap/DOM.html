@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisDocumento</title>
+</head>
+
+    <h1 id="Encabezado">Encabezado anterior</h1>
+    <script>
+        const EncTitulo = document.getElementById("Encabezado");
+        EncTitulo.innerHTML = "Mi nuevo encabezado";
+    </script>
+
+<body>
+    <p name="p1" >Parrafo viejo</p>
+
+    <script>
+        const MultiP = document.getElementsByName("p1");
+    </script>
+    <br>
+    <p id="p1">HOLA MUNDO</p>
+    <script>
+        const nuevop = document.getElementById("p1");
+        nuevop.innerHTML = "!Texto Nuevo!";
+    </script>
+    
+    <main id="main">Soy un ejemplo de "main"</main>
+    <p id="p">Soy un ejemplo "p"</p>
+
+    <script>
+        const x = document.getElementById("main");
+        console.log(x);
+        const y = document.getElementById("p");
+        console.log(y);
+    </script>
+    
+    <p class="intro">Soy el intro en la consola</p>
+    <p class="intro">Soy el intro en la CONSOLA</p>
+
+    <script>
+        const z = document.getElementsByClassName("intro");
+        console.log(z);
+    </script>
+
+        <p class="intro">Intro</p>
+        <p class="intro">yo tambiém</p>
+    <script>
+        const l = document.querySelectorAll("p.intro");
+    </script>
+    <ul>
+        <li class="intro">Power ranger rojo</li>
+        <ul class="intr">Power ranger azul</ul>
+        <li class="intr">Power ranger rosa</li>
+        <ul class="iny">Power ranger verde</ul>
+        <li class="intr">Power ranger gris</li>
+    </ul>
+
+    <script>
+        const ListItem = document.querySelectorAll("ul > li");
+        console.log(ListItem);
+
+    </script>
+
+    <script>
+        const H1element = document.querySelector("h1");
+        console.log(H1element);
+    </script>
+    <ol class="OtraLista">
+        <li class="OtraLista">Azul</li>
+        <li class="OtraLista">Rojo</li>
+        <li class="OtraLista">Rosa</li>
+        <li class="OtraLista">Verde</li>
+        <li class="OtraLista">Amarillo</li>
+    </ol>   
+    <script>
+        const Lista2 = document.querySelector(".OtraLista");
+        console.log(Lista2);
+    </script>
+
+    <ul id="miLista">
+        <li>Hola</li>
+        <li>Hola2</li>
+    </ul>
+
+    <script>
+        const ListaElementos = document.querySelectorAll("#miLista");
+        ListaElementos.forEach(item => {
+            console.log(item.innerHTML);
+        });
+    </script>
+
+    <h1>Soy Otro ejemplo h1</h1>
+
+    <script>
+        const h1 = document.querySelector("h1");
+        h1.style.color = "blue";
+    </script>
+    <form id="Miform">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+    
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+    
+        <input type="submit" value="Enviar">
+    </form>
+    
+
+    <script>
+        const otroForm = document.forms["Miform"]; 
+        let texto = " ";
+        for(let i = 0; i < x.length; i++){ 
+            texto += x.elements[i].value +"<br>";}
+        document.getElementById("nombre").innerHTML = texto; 
+        console.log(otroForm);
+    </script>     
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              let lista = document.createElement("ul");
+              document.body.appendChild(lista);
+          
+              let elemento1 = document.createElement("li");
+              elemento1.textContent = "Flor";
+              lista.appendChild(elemento1);
+          
+              let elemento2 = document.createElement("li");
+              elemento2.textContent = "Jaguar";
+              lista.appendChild(elemento2);
+            });
+          </script>   <br>
+
+    <button id="Boton">Presiona</button><br>
+    <script>
+        const button = document.getElementById("Boton");
+        button.addEventListener("click",() => {alert("No corras sino puede caminar");});
+    </script>
+    <br>
+    
+    <form id="Formulario1" method="Post" onsubmit="return ValidarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombres" name="nombre" ><br>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellidos" name="apellido" required><br>
+            <br>
+            <label for="edad">Edad:</label>
+            <input type="edad" id="edad" name="edad" required><br>
+            <br>
+            <input type="submit" value="Enviar">
+    </form>
+    <script>
+        function ValidarFormulario(){
+            let f = document.forms["Formulario1"]["nombres"].value;
+            if(f === ""){
+                alert("Introduce un nombre");
+                return false;
+            }
+        }
+    </script>
+        <form id="FormularioNum" method="Post" onsubmit="return ValNumero()">
+            <label for="numero">Ingrese un numero 1-10:</label>
+            <input type="number" id="numero" name="numero" ><br>
+            <br>
+            <input type="submit" value="Enviar">
+        </form><br>
+        <script>
+            function ValNumero(){
+            let num = document.getElementById("numero").value;
+            let textil;
+            if(isNaN(num)|| num < 1 || num >10){
+                textil = "Entrada no valida"    
+            }else{
+                textil = "Entrada VALIDA";
+            }
+            document.getElementById("FormularioNum").innerHTML = textil
+            return false;
+        }
+    </script>
+    <img height="250" id="Miimagen"><br>
+    <script>
+        document.getElementById("Miimagen").src = "Articare.png";
+    </script>
+
+    <p id="mihora"></p>
+    <script>
+  document.getElementById("mihora").innerHTML = "Fecha: " + new Date().toLocaleString();
+    </script>
+</body>
+</html>
