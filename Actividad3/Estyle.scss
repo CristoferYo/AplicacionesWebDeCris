@@ -1,0 +1,32 @@
+
+$font-family: 'Roboto Condensed', sans-serif;
+$font-family: 'Roboto Mono', monospace;
+
+$primary: #03373a;
+$success: #ae1605; 
+$dark: #0d00ffc8; 
+$secondary: hsla(228, 100%, 49%, 0.895);
+
+@media (min-width: 992px)
+ {
+.alto-100 { height: 100vh; }
+}
+
+.d-flex img{
+    width: 50px;
+}
+.fondo-card { 
+    background-image: url("C:\Users\crist\OneDrive\Escritorio\Programas\TareasRuth\Parcial 2\marte.jpg");
+    background-repeat: no-repeat; 
+    background-position: 85% top;
+    }
+    $container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        1g: 960px,
+        xl: 960px,
+        xxl: 960px
+        );
+@import "./node_modules/bootstrap/scss/bootstrap.scss"; 
+
+
