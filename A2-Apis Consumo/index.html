@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Uso de API</title>
+  <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Personajes de Los Simpsons</h1>
+  <style>
+    .card {
+      width: 300px;
+      padding: 20px;
+      background-color: black;
+      border-radius: 5px;
+      color: aliceblue;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      width: 80%;
+      border-radius: 5px;
+    }
+    body{
+      background-color: yellow !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" id="characters-container"></div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2 id="modal-name"></h2>
+      <img id="modal-image" alt="Character Image">
+      <p id="modal-description"></p>
+      <button onclick="closeModal()" class="btn btn-primary">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    // Obtener datos de varios personajes de Los Simpsons desde la API
+    fetch('https://thesimpsonsquoteapi.glitch.me/quotes?count=8')
+      .then(response => response.json())
+      .then(data => {
+        const charactersContainer = document.getElementById('characters-container');
+
+        data.forEach(character => {
+          const card = document.createElement('div');
+          card.classList.add('card', 'col-sm-6', 'col-md-4', 'col-lg-3');
+
+          const characterImage = document.createElement('img');
+          characterImage.src = character.image;
+          characterImage.alt = 'Character Image';
+          characterImage.classList.add('character-image');
+
+          const characterName = document.createElement('h3');
+          characterName.textContent = character.character;
+
+          const characterDescription = document.createElement('p');
+          characterDescription.textContent = character.quote;
+
+          const viewButton = document.createElement('button');
+          viewButton.textContent = 'Ver más';
+          viewButton.classList.add('btn', 'btn-primary');
+          viewButton.addEventListener('click', () => openModal(character));
+
+          card.appendChild(characterImage);
+          card.appendChild(characterName);
+          card.appendChild(characterDescription);
+          card.appendChild(viewButton);
+
+          charactersContainer.appendChild(card);
+        });
+      });
+
+    // Abrir la ventana modal para un personaje específico
+    function openModal(character) {
+      const modal = document.getElementById('modal');
+      const modalName = document.getElementById('modal-name');
+      const modalImage = document.getElementById('modal-image');
+      const modalDescription = document.getElementById('modal-description');
+
+      modalName.textContent = character.character;
+      modalImage.src = character.image;
+      modalDescription.textContent = character.quote;
+
+      modal.style.display = 'block';
+    }
+
+    // Cerrar la ventana modal
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.style.display = 'none';
+    }
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
